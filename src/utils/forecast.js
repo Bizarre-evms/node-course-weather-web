@@ -11,7 +11,7 @@ const forecast = (latitude, longitude, callback) => {
             callback('Invalid location')
         } else {
             const currentData = body.currently
-            callback(undefined, body.daily.summary + ' It is currently ' + currentData.temperature + ' degrees out. There is ' + currentData.precipProbability + '% chance of rain today.')
+            callback(undefined, body.daily.summary + ' It is currently ' + currentData.temperature + ' degrees out. There is ' + currentData.precipProbability + '% chance of rain today. The humidity is at ' + currentData.humidity + ". The temperature for today is expected to be at a high of " + body.daily.data[0].temperatureHigh + ' degrees to a low of ' + body.daily.data[0].temperatureLow + ' degrees.')
         }
     })
 }
