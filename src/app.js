@@ -23,14 +23,14 @@ app.use(express.static(publiDirPath))
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather',
-        name: 'Yrimri'
+        name: 'Bizarre'
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About Me',
-        name: 'Yrimri'
+        name: 'Bizarre'
     })
 })
 
@@ -38,7 +38,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
         message: 'No help',
-        name: 'Yrimri'
+        name: 'Bizarre'
     })
 })
 
@@ -72,7 +72,7 @@ app.get('/help/*', (req, res) => {
     res.render('error', {
         title: 'Error',
         errMessage: 'Help article not found.',
-        name: 'Yrimri'
+        name: 'Bizarre'
     })
 })
 
@@ -80,7 +80,7 @@ app.get('*', (req, res) => {
     res.render('error', {
         title: 'Error',
         errMessage: 'Page not found.',
-        name: 'Yrimri'
+        name: 'Bizarre'
     })
 })
 
